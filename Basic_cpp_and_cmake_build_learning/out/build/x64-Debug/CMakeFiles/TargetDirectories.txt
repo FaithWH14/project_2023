@@ -1,0 +1,3 @@
+C:/Users/faithwh14/Desktop/screenshot/OCTOBER/30_learn/out/build/x64-Debug/CMakeFiles/simple_math.dir
+C:/Users/faithwh14/Desktop/screenshot/OCTOBER/30_learn/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/faithwh14/Desktop/screenshot/OCTOBER/30_learn/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

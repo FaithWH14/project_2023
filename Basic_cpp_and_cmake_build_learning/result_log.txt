@@ -1,0 +1,27 @@
+***************************************
+the answer is: 706
+***************************************
+&&&&&&&&&&&&&&& ATTENTION &&&&&&&&&&&&&&&
+BEFORE TRANSFORMED: 33
+now having the double_default_x
+AFTER TRANSFORMED: 66
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+TEMP_X IS: 66
+TEMP_Y IS: 673
+THE POINTER DIFFERENCE IS 1
+THE REAL DIFFERENCE IS 607
+*****************************************
+BEFORE OVERRITE EXIST VAR: 345
+AFTER OVERRITE EXIST VAR: 233
+*****************************************
+
+*****************************************
+THE ADD VALUE OF INHERITANCE IS: 110
+THE MINUS VALUE OF INHERITANCE IS: 66
+THE MULTIPLE VALUE OF INHERITANCE IS: 1936
+*****************************************
+
+THE ANOTHER CLASS MULTIPLE VALUE OF INHERITANCE IS: 1936
+THE ANOTHER CLASS MULTIPLE VALUE OF INHERITANCE IS: 1936
+THEY ARE THE SAME
+*****************************************
