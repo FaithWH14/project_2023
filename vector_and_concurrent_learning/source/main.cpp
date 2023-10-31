@@ -16,8 +16,8 @@ int main() {
 	}
 	
 	catch (const std::invalid_argument& e) {
-			std::cerr << "Error: " << e.what() << std::endl;
-			VectorFunction::printAsterisk();
+		std::cerr << "Error: " << e.what() << std::endl;
+		VectorFunction::printAsterisk();
 	}
 
 	std::cout << std::endl << std::endl << std::endl;
