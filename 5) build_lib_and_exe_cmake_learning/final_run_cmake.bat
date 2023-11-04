@@ -1,0 +1,9 @@
+:: RUN THE MATH123 CMAKELISTS.TXT TO BUILD LIBRARY
+cd math123
+call run_cmake.bat
+
+:: RUN THE RUN_MATH CMAKELISTS.TXT TO BUILD EXE THAT LINK THE LIBRARY
+cd ../run_math
+call run_cmake.bat
+
+cd ..
