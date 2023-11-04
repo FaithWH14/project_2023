@@ -1,4 +1,4 @@
-#include "../math123/utils.h"
+#include "utils.h"
 #include <iostream>
 
 int main() {
