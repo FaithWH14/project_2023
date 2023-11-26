@@ -50,7 +50,6 @@ MainWindow::MainWindow(QWidget *parent)
 
         resize(1200, 900);
         setWindowTitle("Content Page");
-        setStyleSheet("background-color: #FFFFFF");
     });
 
 }
