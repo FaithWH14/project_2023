@@ -1,6 +1,5 @@
-** Habbo Automation **
+## Habbo Automation Scripting
 
-I create this automation scripting to automate the process of entering habbo website, filling username & password, pressing ENTER to sign in, retrieving the Habbo authentication code used to login Habbo GUI application, pasting code to the form, and access
-The feature can also speak, walk, sit, stand, dance and wave non-stop
+I created an automation script to streamline the Habbo website login process. The script handles username and password entry, submits via the ENTER key, retrieves the authentication code for Habbo GUI login, and pastes the code into the designated form. Additionally, it enables actions such as speaking, walking, sitting, standing, dancing, and waving continuously.
 
-I developed this on the date of December 2022 if not mistaken, currently no longer maintaining, unless it is necesssary
+Developed around December 2022, this project is currently inactive and not undergoing maintenance unless deemed necessary.
