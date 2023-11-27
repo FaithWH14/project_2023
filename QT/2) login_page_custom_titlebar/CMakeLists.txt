@@ -49,4 +49,13 @@ target_link_libraries(25_qt PRIVATE
     ws2_32  # Link against the Winsock library
 )
 
-# Rest of your CMake configuration...
+include(GNUInstallDirs)
+install(TARGETS 25_qt
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_finalize_executable(25_qt)
+endif()
