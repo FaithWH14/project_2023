@@ -13,10 +13,10 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -28,52 +28,25 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         login_image.png
         page1.h page1.cpp
         test.jpg
-
         customtitlebar.h
-
-
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET 25_qt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(25_qt SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
+        add_library(25_qt SHARED ${PROJECT_SOURCES})
     else()
-        add_executable(25_qt
-            ${PROJECT_SOURCES}
-        )
+        add_executable(25_qt ${PROJECT_SOURCES})
     endif()
 endif()
 
-target_link_libraries(25_qt PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+# Set Boost include directory
+include_directories("C:/boost_1_83_0")
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
-if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.25_qt)
-endif()
-set_target_properties(25_qt PROPERTIES
-    ${BUNDLE_ID_OPTION}
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
+# Link Boost libraries and ws2_32
+target_link_libraries(25_qt PRIVATE
+    "C:/boost_1_83_0/stage/lib/libboost_thread-vc143-mt-x64-1_83.lib"
+    "C:/boost_1_83_0/stage/lib/libboost_chrono-vc143-mt-x64-1_83.lib"
+    Qt${QT_VERSION_MAJOR}::Widgets
+    ws2_32  # Link against the Winsock library
 )
 
-include(GNUInstallDirs)
-install(TARGETS 25_qt
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
-
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(25_qt)
-endif()
+# Rest of your CMake configuration...
