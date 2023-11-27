@@ -4,4 +4,4 @@ I created an automation script to streamline the Habbo website login process. Th
 
 Developed around December 2022, this project is currently inactive and not undergoing maintenance unless deemed necessary.
 
-Plan to update the code on 2th December 2023 (27th November 2023)
+Plan to update the code on 2th December 2023 (from 27th November 2023)
